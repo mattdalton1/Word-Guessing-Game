@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block the_body %}
+<div id="sideMenu" class="extendLeft">
+	<ul>
+		<li><a href={{home_link}}>Home</a>
+		<li><a href={{word_game}}>Play again</a>
+	</ul>
+</div>
+<div id="scoreBox">
+<ul>
+	{% for line in the_data %}
+
+	<li>{{ line }}
+</ul>
+{% endfor %}
+{% with messages = get_flashed_messages() %}
+
+{% if messages %}
+<p>{{ message }}</p>
+{% endif %}
+{% endwith %}
+
+</div>
+{% endblock %}

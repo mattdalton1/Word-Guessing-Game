@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>{{the_title}}</title>
+        <link rel="stylesheet" href="/static/wordGame.css">
+    </head>
+    <header>
+	<strong>
+		<nav>
+			<ul class="menu">
+				<li>
+					<a href="{{home_link}}">Go to home page</a>
+			</ul>
+		</nav>
+	</strong>
+</header>
+    <body>
+        <h2>{{the_title}}</h2>
+        {% block the_body %}
+        {% endblock%}
+    </body>
+</html>

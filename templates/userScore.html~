@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block the_body %}
+<div id="sideMenu" class="extendLeft">
+	<ul>
+		<li><a href={{home_link}}>Home</a>
+		<li><a href={{word_game}}>Play again</a>
+	</ul>
+</div>
+<div id="menubox">
+	<form action="{{ saveNameAndTime_url }}" method="POST">
+		<ul>
+			<li>Time: {{elapsed_time}} 
+			<li>Enter Name: <input type="text" name="user_name" id="name">
+			<input type="hidden" value="{{elapsed_time}}" name="user_time" id="user_time">
+			<li><input type="SUBMIT" value="Save" class="submit">
+		</ul>
+	</form>
+</div>
+{% endblock %}
