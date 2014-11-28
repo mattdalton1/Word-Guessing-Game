@@ -1,3 +1,7 @@
+"""
+    Author: Matthew Dalton
+    Description: Inner workings of Word Guessing
+"""
 from flask import Flask, render_template, url_for, request, redirect, flash
 import time, random
 from operator import itemgetter
