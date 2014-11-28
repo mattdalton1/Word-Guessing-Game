@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block the_body %}
+<div id="sideMenu" class="extendLeft">
+	<ul>
+		<li><a href={{home_link}}>Home</a>
+		<li><a href={{word_game}}>Play game</a>
+	</ul>
+</div>
+<div id="rulesBox">
+		<ul>
+			<li>Each word is made up from letters contained within the source word (and that the number of each letter in the source word hasn't been exceeded).
+			<li>Each word exists within the dictionary (i.e., it's a "real" word).
+			<li>The words all have three letters or more.
+			<li>There are no duplicates.
+			<li>None of the seven is the source word.
+		</ul>
+</div>
+{% endblock %}

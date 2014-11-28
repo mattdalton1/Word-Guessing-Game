@@ -8,9 +8,8 @@
 </div>
 <div id="box">
 	<form action="{{ saveWords_url }}" method="POST">
-		
 		<p>Source word is:  {{the_srcWrd}}</p>
-		<ul>	
+		<ul>
 			<input type="hidden" value={{the_srcWrd}} name="srcWord" id="srcWord">
 			<input type="hidden" value={{starting_time}} name="time" id="time">
 			<li>Enter a word:<input type ="text" name ="wordOne" id="wordOne" >
@@ -22,15 +21,15 @@
 			<li>Enter a word:<input type ="text" name ="wordSeven" id="wordSeven" >
 			<li><input type="SUBMIT" value="Check" class="submit">
 		</ul>
-			{% with messages = get_flashed_messages() %}
-		{% if messages %}
-			<ul>
-				{% for message in messages %}
-					<li>{{ message }}</li>
-				{% endfor %}
-			</ul>
-		{% endif %}
-	{% endwith %}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
 	</form>
 </div>
 {% endblock %}

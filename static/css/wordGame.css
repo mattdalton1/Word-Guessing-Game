@@ -1,11 +1,11 @@
 /* @font-face */
 @font-face{
 	font-family: Kingthings Xstitch;
-	src: url('fonts/Kingthings Xstitch.ttf')
+	src: url('/static/fonts/Kingthings Xstitch.ttf')
 }
 @font-face{
 	font-family: Kingthings Wrote;
-	src: url('fonts/Kingthings Wrote.ttf')
+	src: url('/static/fonts/Kingthings Wrote.ttf')
 }
 *{
 	border: 0;
@@ -16,10 +16,12 @@
 }
 body{
 	font-family: Verdana, Geneva, Arial, sans-serif;
-  	font-size: medium;  
-  	background: url('img/background.jpg') no-repeat center center fixed;
+  	font-size: medium;
+    background: url('/static/img/background.jpg') no-repeat center center fixed;
   	background-size: cover;
-  	
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
 }
 .extendLeft
 {
@@ -28,7 +30,7 @@ body{
 }
 #sideMenu{
 	background-color: grey;
-	width: 15%;
+	width: 150px;
 	height: 100px;
 	margin-right: 10px;
 	border: solid black;
@@ -39,7 +41,6 @@ body{
 	-moz-border-radius-bottomright: 2em;
 	border-bottom-radius: 2em;
 }
-
 #sideMenu a{
 	color: WHITE;
 	display: block;
@@ -51,14 +52,29 @@ h2{
 	font-size: 3.0em;
 	font-family: Kingthings Xstitch;
 }
-#box, #menuBox, #scoreBox{
-	margin: 100px auto;	
-	border: 4px solid #8FB5C1;	
+#box, #menuBox, #scoreBox, #rulesBox{
+	margin: 100px auto;
+	border: 4px solid #8FB5C1;
 	background-color:#F2F7F9;
 }
+#rulesBox{
+    width: 900px;
+    height: 300px;
+}
+#rulesBox li {
+    text-align: left;
+    font-size: large;
+    color: red;
+    padding: 10px 5px 10px 5px;
+}
 #scoreBox {
-	width: 600px;
+	width: 650px;
 	height: 800px;
+}
+#scoreBox h2{
+    text-align: center;
+    font-size: xx-large;
+    color: red;
 }
 #box{
 	width: 370px;
@@ -68,8 +84,9 @@ h2{
 	width: 500px;
 	height: 250px;
 }
-#box li, #scoreBox {
+#box li {
 	padding: 0 0 25px 15px;
+	text-align: left;
 }
 #box p {
 	text-align: center;
@@ -81,10 +98,13 @@ h2{
 	background-color: GREY;
 	color: white;
 }
-#box input[type='text']:focus {
-	padding-right: 70px;
+#box input[type='text'] {
+	width: 70px;
 }
-#box li input:focus {
+#box input[type='text']:focus {
+	width: 100px;
+}
+#box li input[type='text']:focus {
 	-moz-transition: padding .25s;
 	-webkit-transition: padding .25s;
 	-o-transition: padding .25s;

@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>{{the_title}}</title>
-        <link rel="stylesheet" href="/static/wordGame.css">
+        <link rel="stylesheet" href="/home/daltonmatt1/Word-Guessing-Game/static/wordGame.css">
     </head>
     <header>
 	<strong>
