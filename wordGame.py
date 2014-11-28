@@ -17,7 +17,9 @@ def is_english_word(word):
     return word.lower() in english_words
 
 """ Given a string of letters, return a dictionary
-    which associates a frequency count with each letter. """
+    which associates a frequency count with each letter.
+    From Paul Barry
+"""
 def freq_count(letters):
 	f_count = {}
 	for char in letters:
@@ -27,7 +29,9 @@ def freq_count(letters):
 
 """ Returns True if the letters that make up "what" are
     contained in the letters that make up "source_word",
-    otherwise False is returned. """
+    otherwise False is returned.
+    From Paul Barry
+"""
 def contains(source_word, what):
 	sc = freq_count(source_word)
 	wc = freq_count(what)
